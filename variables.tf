@@ -25,7 +25,7 @@ variable "linux_vm_name" {
 
 variable "subnet_name" {
   type    = string
-  default = "test2-subnet"
+  default = "test222"
 }
 
 variable "linux_os" {

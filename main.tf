@@ -12,9 +12,15 @@ terraform {
   }
 }
 
+# terraform {
+#   backend "gcs" {
+#     bucket  = "gitops-training-testing92"
+#     prefix  = "terraform/state"
+#     }
+# }
+
 terraform {
-  backend "gcs" {
-    bucket  = "gitops-tr8ining-state-file"
-    prefix  = "terraform/state"
-    }
+  backend "local" {
+    path = "terraform/state/terraform.tfstate"
+  }
 }

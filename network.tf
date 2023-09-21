@@ -24,6 +24,6 @@ resource "google_compute_firewall" "test" {
   disabled      = false
   network       = google_compute_network.vpc_network.name
   project       = var.project_id
-  source_ranges = ["38.165.222.110/32"]
+  source_ranges = ["0.0.0.0/0"]
   target_tags   = [var.linux_tag, var.windows_tag]
 }
