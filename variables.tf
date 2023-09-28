@@ -20,7 +20,7 @@ variable "project_zone" {
 
 variable "linux_vm_name" {
   type    = string
-  default = "linux-instance"
+  default = "linux-inst"
 }
 
 variable "subnet_name" {
@@ -59,7 +59,7 @@ variable "network_name" {
 
 variable "windows_vm_name" {
   type    = string
-  default = "windows-instance"
+  default = "windows-inst"
 }
 
 variable "windows_tag" {
@@ -89,5 +89,5 @@ variable "vm_size" {
 
 variable "bucket_name" {
   type = string
-  default = "gitops-training-testing92"
+  default = "value"
 }
