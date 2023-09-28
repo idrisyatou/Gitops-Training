@@ -18,12 +18,12 @@ resource "google_compute_firewall" "test" {
 
   allow {
     protocol = "TCP"
-    ports    = ["22", "3389"]
+    ports    = ["22"]
   }
   direction     = "INGRESS"
   disabled      = false
   network       = google_compute_network.vpc_network.name
   project       = var.project_id
   source_ranges = ["35.235.240.0/20"]
-  target_tags   = [var.linux_tag, var.windows_tag]
+  target_tags   = [var.linux_tag]
 }
