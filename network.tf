@@ -13,17 +13,17 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_firewall" "test" {
-  name     = "iapallow"
+  name     = "allowiap"
   priority = 2
 
   allow {
     protocol = "TCP"
-    ports    = ["22"]
+    ports    = ["22", "3389"]
   }
   direction     = "INGRESS"
   disabled      = false
   network       = google_compute_network.vpc_network.name
   project       = var.project_id
-  source_ranges = ["0.0.0.0/0"]
+  source_ranges = ["35.235.240.0/20"]
   target_tags   = [var.linux_tag, var.windows_tag]
 }

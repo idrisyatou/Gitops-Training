@@ -86,3 +86,8 @@ variable "vm_size" {
   type    = number
   default = 60
 }
+
+variable "bucket_name" {
+  type = string
+  default = "gitops-training-testing92"
+}
