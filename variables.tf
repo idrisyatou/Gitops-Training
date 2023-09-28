@@ -5,7 +5,7 @@ variable "machine_type" {
 
 variable "project_id" {
   type    = string
-  default = "project-test-398201"
+  default = ""
 }
 
 variable "project_region" {
@@ -20,7 +20,7 @@ variable "project_zone" {
 
 variable "linux_vm_name" {
   type    = string
-  default = "linux-inst"
+  default = ""
 }
 
 variable "subnet_name" {
@@ -59,7 +59,7 @@ variable "network_name" {
 
 variable "windows_vm_name" {
   type    = string
-  default = "windows-inst"
+  default = ""
 }
 
 variable "windows_tag" {
